@@ -15,7 +15,9 @@ body {
   flex-direction: column; }
 
 .page-title {
-  font-family: 'Lobster'; }
+  font-family: 'Lobster';
+  font-size: 56px;
+  z-index: 1; }
 
 #app {
   min-width: 80%;

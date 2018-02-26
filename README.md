@@ -1,6 +1,11 @@
 # flexbox-demo
 
-Overhauling my first few page built while learning web programming. You can view the old and gross page [here](https://kohrongying.github.io/chapalang/flexbox/). The new and hopefully less gross one [here](). Built to view on desktop/laptop, not optimized for mobile yet sed.
+Overhauling my first page built while learning web programming. You can view the old and gross page [here](https://kohrongying.github.io/chapalang/flexbox/). 
+![old](old.jpg)
+
+The new and hopefully less gross one [here](https://kohrongying.github.io/flexbox-demo/). Built to view on desktop/laptop, not optimized for mobile yet sed.
+
+![new](demo.jpg)
 
 Built using [VueJS](https://vuejs.org/) which i ah-may-zing for such an application. The binding, the everything, is like so fast and shit. I know I'm kinda late and all but, better late than never right? 
 
