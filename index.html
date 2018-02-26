@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Demo</title>
+    <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
+    <link href='styles.css' rel='stylesheet' type='text/css'>
+	<script
+	  src="https://code.jquery.com/jquery-3.1.1.min.js"
+	  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+	  crossorigin="anonymous"></script>
+	<script src="semantic/dist/semantic.min.js"></script>
+
+  </head>
+  <body>
+  	<div class="page-title">flexbox demo</div>
+    <div id="app">
+    	<div id="demo-area" :style="{ 'justify-content': justifyContent.value, 'align-items': alignItems.value, 'flex-direction': flexDirection.value, 'flex-wrap': flexWrap.value }">
+    		<div style="background-color: #D24D57;"></div>
+    		<div style="background-color: #1E8BC3;"></div>
+    		<div style="background-color: #26A65B;"></div>
+    	</div>
+
+    	<div id="display-area">
+    		<p>#demo-area {</p>
+    		<p>display: flex;</p>
+    		<p>justify-content: {{ justifyContent.value }};</p>
+    		<p>align-items: {{ alignItems.value }};</p>
+    		<p>flex-direction: {{ flexDirection.value }};</p>
+    		<p>flex-wrap: {{ flexWrap.value }};</p>
+    		<p>align-content: {{ alignContent.value }};</p>
+    		<p>}</p>
+    	</div>
+
+    	<div id="controls-area">
+    		<div class="ui equal width grid">
+
+    			<div class="column">
+	    			<h4 @mouseover="justifyContent.active = true" @mouseleave = "justifyContent.active = false">Justify-Content</h4>
+	    			<div class="custom-tooltip" v-if="justifyContent.active">
+	    				<p>Align Items horizontally</p>
+	    				<span class="caret"></span>
+	    			</div>
+	    			<div class="ui form">
+		    			<div class="grouped fields">
+
+		    				<div v-for="field in justifyContentOpt">
+		    					<div class="field">
+				    				<div class="ui radio checkbox">
+						    			<input type="radio" :value="field" v-model="justifyContent.value">
+										<label>{{ field }}</label>
+									</div>
+								</div>
+		    				</div>
+							
+						</div>
+					</div>
+				</div>
+
+				<div class="column">
+	    			<h4 @mouseover="alignItems.active = true" @mouseleave = "alignItems.active = false">align-items</h4>
+	    			<div class="custom-tooltip" v-if="alignItems.active">
+	    				<p>Align Items vertically</p>
+	    				<span class="caret"></span>
+	    			</div>
+
+	    			<div class="ui form">
+		    			<div class="grouped fields">
+			    			<div v-for="field in alignItemsOpt">
+		    					<div class="field">
+				    				<div class="ui radio checkbox">
+						    			<input type="radio" :value="field" v-model="alignItems.value">
+										<label>{{ field }}</label>
+									</div>
+								</div>
+		    				</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="column">
+					<h4 @mouseover="flexDirection.active = true" @mouseleave = "flexDirection.active = false">flex-direction</h4>
+	    			<div class="custom-tooltip" v-if="flexDirection.active">
+	    				<p>Defines direction the items are placed in container</p>
+	    				<span class="caret"></span>
+	    			</div>
+
+	    			<div class="ui form">
+		    			<div class="grouped fields">
+			    			
+							<div v-for="field in flexDirectionOpt">
+		    					<div class="field">
+				    				<div class="ui radio checkbox">
+						    			<input type="radio" :value="field" v-model="flexDirection.value">
+										<label>{{ field }}</label>
+									</div>
+								</div>
+		    				</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="column">
+					<h4 @mouseover="flexWrap.active = true" @mouseleave = "flexWrap.active = false">flex-wrap</h4>
+	    			<div class="custom-tooltip" v-if="flexWrap.active">
+	    				<p>Defines direction the items are placed in container</p>
+	    				<span class="caret"></span>
+	    			</div>
+
+	    			<div class="ui form">
+		    			<div class="grouped fields">
+			    			
+							<div v-for="field in flexWrapOpt">
+		    					<div class="field">
+				    				<div class="ui radio checkbox">
+						    			<input type="radio" :value="field" v-model="flexWrap.value">
+										<label>{{ field }}</label>
+									</div>
+								</div>
+		    				</div>
+						</div>
+					</div>
+				</div>
+				
+			
+    		</div><!-- ui equal width grid -->
+    		
+    	</div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+    <script src='scripts.js'></script>
+  </body>
+</html>

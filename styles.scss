@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro|Lobster');
+
+body {
+	background: #3A1C71;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #FFAF7B, #D76D77, #3A1C71);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #FFAF7B, #D76D77, #3A1C71); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	height: 100vh;
+	width: 100vw;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.page-title {
+	font-family: 'Lobster';
+}
+
+#app {
+	min-width: 80%;
+	height: 80%;
+	background: rgba(255,255,255,0.5);
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(3, 1fr);
+
+	#demo-area {
+		grid-column: 1 / 3;
+		grid-row: 1 / 3;
+		padding: 10px; 
+		display: flex;
+
+		div {
+			width: 30px;
+			height: 30px;
+			border-radius: 50%;
+			margin: 10px;
+			background: white;
+		}
+	}
+
+	#display-area {
+		grid-column: 3;
+		grid-row: 1 / 3;
+		background: rgba(0,0,0,0.3);
+		color: white;
+		font-family: 'Source Code Pro';
+		padding: 10px 20px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+
+		p:not(:first-child):not(:last-child) {
+			margin-left: 20px;
+		}
+	}
+
+	#controls-area {
+		grid-column: 1 / -1;
+		grid-row: 3;
+		background: white;
+
+		.ui.grid {
+			margin: 0;
+		}
+
+		.custom-tooltip {
+			position: absolute;
+			bottom: 92%;
+
+			p {
+				background-color: black;
+				color: white;
+				padding: 5px;
+				border-radius: 5px;
+				z-index: 999;
+			}
+			span.caret {
+				position:absolute;
+				width: 20px;
+				height: 10px;
+				background-color: black;
+				-webkit-clip-path: polygon(100% 0, 0 0, 50% 100%);
+				clip-path: polygon(100% 0, 0 0, 50% 100%);
+				bottom: 8%;
+				left: calc(50% - 10px);
+			}
+		}
+	}
+
+}
