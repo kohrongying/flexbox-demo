@@ -1,7 +1,11 @@
 deploy:
   provider: pages
   skip-cleanup: true
-  github-token: $GITHUB_TOKEN  # Set in travis-ci.org dashboard, marked secure
+  github-token: "$GITHUB_TOKEN"
   keep-history: true
+  repo: kohrongying/flexbox-demo
   on:
     branch: master
+env:
+  global:
+    secure: zl0Jq2rAVrKPuIRbB4UIDP0TzvY7XdL0ac9Fl7x+uFpU4dLM3P3AxywODtMuxrp1msMQWRxiinmhcIaLFMjDs6RAcM7xSL7CKo4U+gIfMZU1zREPvvB5VpyvwkGbDob5v2248hPmzdSki1BM8IQfU70JrvEqQBrZumNohtacoOQESufWsrYe/W6BZoy+ZJc2RunUShkITJqJPq2WHjlGkq8hO+9eQsDQlNE2/UOHpdDVId70dP3cCa78SU8LxJ1tM/EKQ6cf6OOeyQVX1cOuu/1drXutdLaX9oi+zt6+CaC30/k7uczIy1m5/C6aojWd1FyfmDvJloKtAxq0Xz4FFXrd1w6V4W8l8S3g3taR0EqUNvy70M9PmCV2htkvyiEc/jP7RzkbTLBAxEAjATFmjpVhpKNH1xcxNyNryi/WyMaFcgy0UEA3z3O9MDOBBsdQkCPsg+hYQ1I2B7agu3gCW+Bt9htfabMkcywrYw+HizDl34fhdKyo6GmVuhyli3sinevwi1L1YNTJxWEEixmsCxtpE5AT4CJv/Ph+89GgPMXng/bX3zBcTP0gRpmb49/NktKyd1g661oRTkVX25jwpiBsZkEWwAeaH/ec0iCluQ7VK89HSnz54tWB4EuSH6Ukj6OdlOPwpdzNPj1eCDPpVoV6kwLz6FyHRv/oUQ+5SSA=
